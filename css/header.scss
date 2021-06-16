@@ -1,0 +1,213 @@
+/* header */
+@mixin overTab {
+    @media print,screen and (min-width: 960px) {
+      @content;
+    }
+  }
+  
+  .__sp {
+    @include overTab {
+      display: none;
+    }
+  }
+  
+.header {
+    font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",
+      YuGothic, "Yu Gothic", sans-serif;
+    max-width: 100%;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+  
+    .inner {
+      display: flex;
+      background-color: #fff;
+      width: 100%;
+      line-height: 80px;
+      .header_fixed {
+        margin-right: auto;
+        width: 100%;
+        z-index: 4;
+        background: #fff;
+        display: flex;
+  
+        @include overTab {
+          width: auto;
+        }
+  
+        .nav_btn {
+          margin-left: auto;
+          width: 52px;
+          height: 30px;
+          appearance: none;
+          background: transparent;
+          border: none;
+          font: inherit;
+          outline: none;
+          position: relative;
+          right: 30px;
+          top: 25px;
+  
+          @include overTab {
+            display: none;
+          }
+          &.-active {
+            span {
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              transition: transform 0.3s ease;
+              &:first-child {
+                transform: rotate(45deg);
+              }
+              &:nth-child(2) {
+                transform: rotate(45deg);
+              }
+              &:last-child {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+  
+          span {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: #ff6347;
+            display: block;
+            transition: transform 0.3s ease;
+            &:first-child {
+              top: 0;
+            }
+            &:nth-child(2) {
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+            &:last-child {
+              bottom: 0;
+            }
+          }
+        }
+      }
+  
+      .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #000000cc;
+        padding-top: 145px;
+        z-index: 3;
+        opacity: 0;
+        visibility: inherit;
+        transition: opacity 0.3s ease;
+        @include overTab {
+          position: static;
+          width: initial;
+          background-color: transparent;
+          margin-left: auto;
+          padding-top: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+  
+        &.-active {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.3s ease;
+        }
+  
+        .nav_wrap {
+          padding-top: 0;
+          padding-bottom: 65px;
+          @include overTab {
+            padding-top: 10px;
+            padding-bottom: 0;
+          }
+          .nav_list {
+            text-align: center;
+            margin-right: 0;
+            @include overTab {
+              display: flex;
+              margin-right: 40px;
+            }
+  
+            .item:not(:last-child) {
+              font-size: 40px;
+              @include overTab {
+                font-size: 24px;
+              }
+              a {
+                color: #ff6347;
+                font-weight: 600;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+              }
+              a::after {
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 4px;
+                background: #ff6347;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+              }
+              a:hover::after {
+                bottom: 4px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            .item:nth-child(n + 2) {
+              margin-left: 0;
+              @include overTab {
+                margin-left: 25px;
+              }
+            }
+            .item:last-child {
+              .btn {
+                a {
+                  color: #fff;
+                  background-color: #ff6347;
+                  font-size: 22px;
+                  text-align: center;
+                  cursor: pointer;
+                  transition: all 0.3s ease 0s;
+                  border-radius: 30px 30px 30px 30px;
+                  padding: 10px 40px 10px 40px;
+                }
+                a:hover {
+                  opacity: 0.6;
+                }
+              }
+            }
+            .item:last-child {
+              display: none;
+              @include overTab {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    html,
+	body {
+		overflow-x: hidden;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+    .header {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  

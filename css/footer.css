@@ -1,0 +1,28 @@
+/* footer */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.footer .inner p {
+  color: #ff6347;
+  font-size: 12px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .footer .inner p {
+    font-size: 8px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
