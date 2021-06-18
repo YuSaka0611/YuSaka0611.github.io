@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* header */
+@media print, screen and (min-width: 960px) {
+  .__sp {
+    display: none;
+  }
+}
+
+.header {
+  font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", YuGothic, "Yu Gothic", sans-serif;
+  max-width: 100%;
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+}
+
+.header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  line-height: 80px;
+}
+
+.header .inner .header_fixed {
+  margin-right: auto;
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .header_fixed {
+    width: auto;
+  }
+}
+
+.header .inner .header_fixed .nav_btn {
+  margin-left: auto;
+  width: 52px;
+  height: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  outline: none;
+  position: relative;
+  right: 30px;
+  top: 25px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .header_fixed .nav_btn {
+    display: none;
+  }
+}
+
+.header .inner .header_fixed .nav_btn.-active span {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .inner .header_fixed .nav_btn.-active span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .inner .header_fixed .nav_btn.-active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .inner .header_fixed .nav_btn.-active span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .inner .header_fixed .nav_btn span {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ff6347;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .inner .header_fixed .nav_btn span:first-child {
+  top: 0;
+}
+
+.header .inner .header_fixed .nav_btn span:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.header .inner .header_fixed .nav_btn span:last-child {
+  bottom: 0;
+}
+
+.header .inner .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #000000cc;
+  padding-top: 145px;
+  z-index: 3;
+  opacity: 0;
+  visibility: inherit;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav {
+    position: static;
+    width: initial;
+    background-color: transparent;
+    margin-left: auto;
+    padding-top: 0;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+
+.header .inner .nav.-active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.header .inner .nav .nav_wrap {
+  padding-top: 0;
+  padding-bottom: 65px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list {
+  text-align: center;
+  margin-right: 0;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 40px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) {
+  font-size: 40px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:not(:last-child) {
+    font-size: 24px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a {
+  color: #ff6347;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #ff6347;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a:hover::after {
+  bottom: 4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:nth-child(n + 2) {
+  margin-left: 0;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:nth-child(n + 2) {
+    margin-left: 25px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child .btn a {
+  color: #fff;
+  background-color: #ff6347;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 30px 30px 30px 30px;
+  padding: 10px 40px 10px 40px;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child .btn a:hover {
+  opacity: 0.6;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child {
+  display: none;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:last-child {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=header.css.map */
