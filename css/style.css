@@ -1,0 +1,1347 @@
+@charset "UTF-8";
+/* header */
+@media print, screen and (min-width: 960px) {
+  .__sp {
+    display: none;
+  }
+}
+
+.header {
+  font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", YuGothic, "Yu Gothic", sans-serif;
+  max-width: 100%;
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+}
+
+.header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  line-height: 80px;
+}
+
+.header .inner .header_fixed {
+  margin-right: auto;
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .header_fixed {
+    width: auto;
+  }
+}
+
+.header .inner .header_fixed .nav_btn {
+  margin-left: auto;
+  width: 52px;
+  height: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  outline: none;
+  position: relative;
+  right: 30px;
+  top: 25px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .header_fixed .nav_btn {
+    display: none;
+  }
+}
+
+.header .inner .header_fixed .nav_btn.-active span {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .inner .header_fixed .nav_btn.-active span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .inner .header_fixed .nav_btn.-active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .inner .header_fixed .nav_btn.-active span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .inner .header_fixed .nav_btn span {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ff6347;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .inner .header_fixed .nav_btn span:first-child {
+  top: 0;
+}
+
+.header .inner .header_fixed .nav_btn span:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.header .inner .header_fixed .nav_btn span:last-child {
+  bottom: 0;
+}
+
+.header .inner .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #000000cc;
+  padding-top: 145px;
+  z-index: 3;
+  opacity: 0;
+  visibility: inherit;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav {
+    position: static;
+    width: initial;
+    background-color: transparent;
+    margin-left: auto;
+    padding-top: 0;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+
+.header .inner .nav.-active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.header .inner .nav .nav_wrap {
+  padding-top: 0;
+  padding-bottom: 65px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list {
+  text-align: center;
+  margin-right: 0;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 40px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) {
+  font-size: 40px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:not(:last-child) {
+    font-size: 24px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a {
+  color: #ff6347;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #ff6347;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:not(:last-child) a:hover::after {
+  bottom: 4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:nth-child(n + 2) {
+  margin-left: 0;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:nth-child(n + 2) {
+    margin-left: 25px;
+  }
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child .btn a {
+  color: #fff;
+  background-color: #ff6347;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 30px 30px 30px 30px;
+  padding: 10px 40px 10px 40px;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child .btn a:hover {
+  opacity: 0.6;
+}
+
+.header .inner .nav .nav_wrap .nav_list .item:last-child {
+  display: none;
+}
+
+@media print, screen and (min-width: 960px) {
+  .header .inner .nav .nav_wrap .nav_list .item:last-child {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+/* top */
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
+.top {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  z-index: 1;
+  padding-top: 80px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.top .black {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+}
+
+.top .black .top_pic {
+  background-image: url(/image/pexels-julia-m-cameron-4144923.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  width: 100%;
+  position: relative;
+}
+
+.top .black .top_pic .box {
+  position: absolute;
+  width: 100%;
+  height: 750px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.top .black .top_pic .text {
+  position: absolute;
+  left: 50%;
+  top: 7.5%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  font-size: 18px;
+  width: 320px;
+  text-align: center;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .black .top_pic .text {
+    font-size: 26px;
+    width: 450px;
+  }
+}
+
+.top .container {
+  top: 200px;
+  height: 600px;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.top .container .pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.top .container .pic .top_pic2 {
+  background-image: url(/image/top_pic.png.jpg);
+  width: 80%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .pic .top_pic2 {
+    width: 70%;
+  }
+}
+
+.top .container .pic .top_pic1 {
+  background-color: #fff;
+  width: 20%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .pic .top_pic1 {
+    width: 30%;
+  }
+}
+
+.top .container .pic .white {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: rgba(240, 240, 224, 0.6);
+}
+
+.top .container .top_text {
+  position: absolute;
+  color: black;
+  left: 30%;
+  top: 40%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  padding-left: 40px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .top_text {
+    font-size: 48px;
+    padding-left: 80px;
+  }
+}
+
+.top .container .top_text .text_main1 {
+  font-size: 36px;
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .top_text .text_main1 {
+    font-size: 48px;
+  }
+}
+
+.top .container .top_text .text_main2 {
+  font-size: 36px;
+  font-weight: 900;
+  padding-bottom: 30px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .top_text .text_main2 {
+    font-size: 48px;
+  }
+}
+
+.top .container .top_text .text_sub1 {
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top .container .top_text .text_sub1 {
+    font-size: 26px;
+  }
+}
+
+.top .container .top_text .text_sub1 span {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .top {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .top .black .top_pic {
+    height: 600px;
+  }
+  .top .black .top_pic .box {
+    height: 600px;
+  }
+  .top .black .top_pic .text {
+    display: none;
+  }
+  .top .container {
+    height: 500px;
+    top: 150px;
+  }
+  .top .container .pic .white {
+    height: 500px;
+  }
+  .top .container .top_text {
+    top: 40%;
+    list-style-position: inside;
+    width: 250px;
+    left: 35%;
+  }
+  .top .container .top_text .text_main1 {
+    font-size: 24px;
+  }
+  .top .container .top_text .text_main2 {
+    font-size: 24px;
+  }
+  .top .container .top_text .text_sub1 {
+    font-size: 12px;
+  }
+  .top .container .top_text .text_sub1 span {
+    font-size: 14px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
+/* skill */
+.skill {
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.skill .inner {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.skill .inner .container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner .container {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.skill .inner .container .skill_title {
+  padding-bottom: 37px;
+}
+
+.skill .inner .container .skill_title .main {
+  font-size: 40px;
+  color: #ff6347;
+  font-weight: 900;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner .container .skill_title .main {
+    font-size: 54px;
+  }
+}
+
+.skill .inner .container .nav .nav_wrap {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner .container .nav .nav_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.skill .inner .container .nav .nav_wrap .nav_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner .container .nav .nav_wrap .nav_list {
+    margin-bottom: 0px;
+  }
+}
+
+.skill .inner .container .nav .nav_wrap .nav_list .item {
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 768px) {
+  .skill .inner .container .nav .nav_wrap .nav_list .item {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% / 2);
+  }
+}
+
+.skill .inner .container .nav .nav_wrap .nav_list .item img {
+  width: auto;
+  height: 200px;
+}
+
+.skill .inner .container .nav .nav_wrap .nav_list .item h4 {
+  background-color: #ff6347;
+  color: #fff;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .skill {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .skill .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .skill .inner .container .nav .nav_wrap .nav_list {
+    display: block;
+    margin-bottom: 0;
+  }
+  .skill .inner .container .nav .nav_wrap .nav_list .item {
+    margin-bottom: 30px;
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .skill .inner .container .nav .nav_wrap .nav_list:nth-child(2) .item:nth-child(2) {
+    margin-bottom: 0px;
+  }
+}
+
+/* service */
+@media print, screen and (min-width: 960px) {
+  .__sp {
+    display: none;
+  }
+}
+
+.service {
+  background-color: #FFE4C4;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", YuGothic, "Yu Gothic", sans-serif;
+}
+
+.service .inner {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.service .inner .container {
+  display: block;
+  margin: 0 auto;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.service .inner .container .pic {
+  width: 373px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .pic {
+    width: 50%;
+    margin-right: 25px;
+  }
+}
+
+.service .inner .container .pic img {
+  height: 270px;
+  width: 100%;
+  padding: 11px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .pic img {
+    width: 100%;
+    height: 330px;
+  }
+}
+
+.service .inner .container .service_text {
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 40px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .service_text {
+    width: 50%;
+    margin-left: 25px;
+  }
+}
+
+.service .inner .container .service_text .service_title {
+  margin-bottom: 37px;
+  text-align: center;
+}
+
+.service .inner .container .service_text .service_title .main {
+  font-size: 40px;
+  color: #ff6347;
+  font-weight: 900;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .service_text .service_title .main {
+    font-size: 54px;
+  }
+}
+
+.service .inner .container .service_text .price {
+  text-align: left;
+}
+
+.service .inner .container .service_text .price .item {
+  font-size: 18px;
+  color: #ff6347;
+  margin-bottom: 22px;
+  border-radius: 30px 30px 30px 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  padding-left: 30px;
+  text-align: center;
+  background-color: #F0F0E0;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .service_text .price .item {
+    font-size: 20px;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+}
+
+.service .inner .container .service_text .price .item:first-child span {
+  padding-left: 100px;
+}
+
+.service .inner .container .service_text .price .item:nth-child(2) span {
+  padding-left: 195px;
+}
+
+.service .inner .container .service_text .price .item:nth-child(3) span {
+  padding-left: 25px;
+}
+
+.service .inner .container .service_text .price .item2 {
+  color: black;
+  font-size: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .service_text .price .item2 {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.service .inner .container .service_text .btn {
+  text-align: center;
+}
+
+.service .inner .container .service_text .btn a {
+  color: #fff;
+  background-color: #ff6347;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 30px 30px 30px 30px;
+}
+
+@media print, screen and (min-width: 960px) {
+  .service .inner .container .service_text .btn a {
+    font-size: 18px;
+  }
+}
+
+.service .inner .container .service_text .btn a:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .service {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  .service .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .service .inner .container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .service .inner .container .pic {
+    width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .service .inner .container .pic img {
+    height: 200px;
+    width: 278px;
+  }
+  .service .inner .container .service_text .price .item {
+    font-size: 18px;
+  }
+  .service .inner .container .service_text .price .item:first-child span {
+    padding-left: 0px;
+  }
+  .service .inner .container .service_text .price .item:nth-child(2) span {
+    padding-left: 0;
+  }
+  .service .inner .container .service_text .price .item:nth-child(3) span {
+    padding-left: 0;
+  }
+}
+
+/* works */
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
+.works {
+  background-color: #fff;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.works .inner {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .inner {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.works .inner .container .works_title {
+  margin-bottom: 37px;
+}
+
+.works .inner .container .works_title .main {
+  font-size: 40px;
+  color: #ff6347;
+  font-weight: 900;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .inner .container .works_title .main {
+    font-size: 54px;
+  }
+}
+
+.works .inner .container .nav .nav_wrap .nav_list {
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .inner .container .nav .nav_wrap .nav_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item {
+  width: 430px;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .inner .container .nav .nav_wrap .nav_list .item {
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50%;
+  }
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item img {
+  width: 100%;
+  height: 290px;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item .caption {
+  visibility: hidden;
+  font-size: 100%;
+  color: #fff;
+  left: 50%;
+  top: 75%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.4s step-end;
+  transition: all 0.4s step-end;
+  width: 400px;
+  height: 290px;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item .caption .text {
+  color: #fff;
+  opacity: 0;
+  line-height: 2;
+  text-align: center;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item .mask1 {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: -50%;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item .mask2 {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  bottom: -50%;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item:hover .caption {
+  visibility: visible;
+  width: 300px;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item:hover .text {
+  opacity: 1;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item:hover .mask1 {
+  top: 0;
+}
+
+.works .inner .container .nav .nav_wrap .nav_list .item:hover .mask2 {
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .works {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .works .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .works .inner .container .nav .nav_wrap .nav_list {
+    display: block;
+  }
+  .works .inner .container .nav .nav_wrap .nav_list .item {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 270px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .works .inner .container .nav .nav_wrap .nav_list .item a img {
+    height: 270px;
+    width: 100%;
+  }
+  .works .inner .container .nav .nav_wrap .nav_list .item:hover {
+    display: none;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
+/* contact */
+.contact {
+  max-width: 100%;
+  width: 100%;
+  height: 600px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.contact .inner {
+  position: relative;
+  height: 100%;
+}
+
+.contact .inner .pic {
+  background-image: url(/image/contact背景.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.contact .inner .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.contact .inner .container .contact_title {
+  width: 100%;
+}
+
+.contact .inner .container .contact_title .main {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+@media print, screen and (min-width: 768px) {
+  .contact .inner .container .contact_title .main {
+    font-size: 50px;
+  }
+}
+
+.contact .inner .container .btn {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.contact .inner .container .btn a {
+  color: #ff6347;
+  background-color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 50px 50px 50px 50px;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 768px) {
+  .contact .inner .container .btn a {
+    font-size: 36px;
+  }
+}
+
+.contact .inner .container .btn a:hover {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.contact .inner .container p {
+  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media print, screen and (min-width: 768px) {
+  .contact .inner .container p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .contact {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+  }
+  .contact .inner .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact .inner .container .contact_title .main {
+    font-size: 26px;
+  }
+  .contact .inner .container .btn a {
+    font-size: 22px;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.footer .inner p {
+  color: #ff6347;
+  font-size: 12px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .footer .inner p {
+    font-size: 8px;
+  }
+}
+
+body {
+  max-width: 100%;
+  color: white;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
+/* About Me */
+.about {
+  background-color: #FFE4C4;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.about .inner {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.about .inner .container {
+  color: #ff6347;
+}
+
+.about .inner .container .about_title {
+  margin-bottom: 37px;
+}
+
+.about .inner .container .about_title .main {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_title .main {
+    font-size: 54px;
+    font-weight: 900;
+  }
+}
+
+.about .inner .container .picture {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about .inner .container .picture img {
+  height: 270px;
+  width: 364px;
+  padding: 11px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .picture img {
+    height: 370px;
+    width: 464px;
+  }
+}
+
+.about .inner .container .introduction {
+  margin-bottom: 30px;
+}
+
+.about .inner .container .introduction h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.about .inner .container .about_text .text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+  background-color: #F0F0E0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.about .inner .container .about_text .text p:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_text .text {
+    font-size: 16px;
+  }
+}
+
+.about .inner .container .about_text .text span {
+  color: #ff6347;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_text .text span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .about {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .about .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about .inner .container .picture {
+    width: 300px;
+    height: 200px;
+  }
+  .about .inner .container .picture img {
+    width: 278px;
+    height: 200px;
+  }
+  .about .inner .container .introduction h3 {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
