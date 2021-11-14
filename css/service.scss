@@ -1,225 +1,248 @@
 /* service */
 @mixin overTab {
-    @media print,screen and (min-width: 960px) {
-      @content;
-    }
+  @media print,screen and (min-width: 960px) {
+    @content;
   }
-  
-  .__sp {
+}
+
+.__sp {
+  @include overTab {
+    display: none;
+  }
+}
+.service {
+  background-color: #FFE4C4;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",
+    YuGothic, "Yu Gothic", sans-serif;
+
+  .inner {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
     @include overTab {
-      display: none;
+      padding-left: 143px;
+      padding-right: 143px;
+    
     }
-  }
-  .service {
-    background-color: #FFE4C4;
-    max-width: 100%;
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    font-family: "Courier", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",
-      YuGothic, "Yu Gothic", sans-serif;
-  
-    .inner {
-      padding-left: 50px;
-      padding-right: 50px;
-      margin-left: auto;
-      margin-right: auto;
+
+    .container {
+      display: block;
+      margin: 0 auto;
       @include overTab {
-        padding-left: 143px;
-        padding-right: 143px;
-      
+        display: flex;
       }
-  
-      .container {
-        display: block;
-        margin: 0 auto;
+
+      .pic {
+        width: 373px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 70px;
         @include overTab {
-          display: flex;
+          width: 50%;
+          margin-right: 25px;
+          
         }
-  
-        .pic {
-          width: 373px;
-          margin-right: auto;
-          margin-left: auto;
+        img {
+          height: 270px;
+          width: 100%;
+          padding: 11px;
+          background-color: #ffffff;
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
           @include overTab {
-            width: 50%;
-            margin-right: 25px;
-            
-          }
-          img {
-            height: 270px;
             width: 100%;
-            padding: 11px;
-            background-color: #ffffff;
-            box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+            height: 330px;
+          }
+        }
+      }
+
+      .service_text {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 40px;
+        @include overTab {
+          width: 50%;
+          margin-left: 25px;
+        }
+
+        .service_title {
+          margin-bottom: 37px;
+          text-align: center;
+
+          .main {
+            font-size: 40px;
+            color: #ff6347;
+            font-weight: 900;
             @include overTab {
-              width: 100%;
-              height: 330px;
+              font-size: 54px;
             }
           }
         }
-  
-        .service_text {
-          width: 100%;
-          margin-left: 0px;
-          margin-top: 40px;
-          @include overTab {
-            width: 50%;
-            margin-left: 25px;
-          }
-  
-          .service_title {
-            margin-bottom: 37px;
+        .price {
+          text-align: left;
+          .item {
+            font-size: 16px;
+            color: #ff6347;
+            margin-bottom: 22px;
+            border-radius: 30px 30px 30px 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: 700;
+            padding-left: 30px;
             text-align: center;
+            background-color: #F0F0E0 ;
+            box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+            @include overTab {
+              font-size: 20px;
+              margin-bottom: 26px;
+              text-align: center;
+            }
+            
+          }
+          .item:first-child {
+            span {
+              padding-left: 100px;
+            }
+          }
+          .item:nth-child(2) {
+            span {
+              padding-left: 195px;
+            }
+          }
+          .item:nth-child(3) {
+            span {
+              padding-left: 25px;
+            }
+          }
+          .item:nth-child(4) {
+            span {
+              padding-left: 100px;
+            }
+          }
+          .item:nth-child(5) {
+            span {
+              padding-left: 100px;
+            }
+          }
+          .item2 {
+            color: black;
+            font-size: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            @include overTab {
+              font-size: 16px;
+              text-align: left;
+            }
+          }
+        }
+        .btn {
+          text-align: center;
+          a {
+            color: #fff;
+            background-color: #ff6347;
+            font-size: 22px;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            border-radius: 30px 30px 30px 30px;
+            @include overTab {
+              font-size: 18px;
+            }
+          }
+          a:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
   
+  .service {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    .inner {
+      padding-left: 10px;
+      padding-right: 10px;
+      
+      .container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        
+        .pic {
+          width: 300px;
+          padding-left: 0;
+          padding-right: 0;
+          margin-top: 0;
+
+          
+          img {
+            height: 200px;
+            width: 278px;
+            
+           
+          }
+        }
+        .service_text {
+          .service_title {
             .main {
-              font-size: 40px;
-              color: #ff6347;
-              font-weight: 900;
-              @include overTab {
-                font-size: 54px;
-              }
+  
             }
           }
           .price {
-            text-align: left;
             .item {
-              font-size: 18px;
-              color: #ff6347;
-              margin-bottom: 22px;
-              border-radius: 30px 30px 30px 30px;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              font-weight: 700;
-              padding-left: 30px;
-              text-align: center;
-              background-color: #F0F0E0 ;
-              box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-              @include overTab {
-                font-size: 20px;
-                margin-bottom: 26px;
-                text-align: center;
-              }
-              
+              font-size: 14px;
+              text-align: left;
             }
             .item:first-child {
               span {
-                padding-left: 100px;
+                padding-left: 10px;
               }
             }
             .item:nth-child(2) {
               span {
-                padding-left: 195px;
+                padding-left: 10px;
               }
             }
             .item:nth-child(3) {
               span {
-                padding-left: 25px;
+                padding-left: 10px;
               }
             }
-            .item2 {
-              color: black;
-              font-size: 12px;
-              margin-bottom: 30px;
-              text-align: center;
-              @include overTab {
-                font-size: 16px;
-                text-align: left;
+            .item:nth-child(4) {
+              span {
+                padding-left: 10px;
               }
             }
-          }
-          .btn {
-            text-align: center;
-            a {
-              color: #fff;
-              background-color: #ff6347;
-              font-size: 22px;
-              text-align: center;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              padding-left: 40px;
-              padding-right: 40px;
-              display: inline-block;
-              cursor: pointer;
-              transition: all 0.3s ease 0s;
-              border-radius: 30px 30px 30px 30px;
-              @include overTab {
-                font-size: 18px;
+            .item:nth-child(5) {
+              span {
+                padding-left: 10px;
               }
-            }
-            a:hover {
-              opacity: 0.6;
             }
           }
         }
-      }
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    html,
-  body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-    
-    .service {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: 100%;
-      .inner {
-        padding-left: 10px;
-        padding-right: 10px;
-        
-        .container {
-          width: 100%;
-          margin-left: 0;
-          margin-right: 0;
-          
-          .pic {
-            width: 300px;
-            padding-left: 0;
-            padding-right: 0;
-  
-            
-            img {
-              height: 200px;
-              width: 278px;
-              
-             
-            }
-          }
-          .service_text {
-            .service_title {
-              .main {
-    
-              }
-            }
-            .price {
-              .item {
-                font-size: 18px;
-              }
-              .item:first-child {
-                span {
-                  padding-left: 0px;
-                }
-              }
-              .item:nth-child(2) {
-                span {
-                  padding-left: 0;
-                }
-              }
-              .item:nth-child(3) {
-                span {
-                  padding-left: 0;
-                }
-              }
-            }
-          }
-          
-        }
         
       }
+      
     }
   }
+}

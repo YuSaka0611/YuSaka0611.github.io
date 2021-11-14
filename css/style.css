@@ -477,6 +477,152 @@
   }
 }
 
+/* About Me */
+.about {
+  background-color: #FFE4C4;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
+
+.about .inner {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner {
+    padding-left: 143px;
+    padding-right: 143px;
+  }
+}
+
+.about .inner .container {
+  color: #ff6347;
+}
+
+.about .inner .container .about_title {
+  margin-bottom: 37px;
+}
+
+.about .inner .container .about_title .main {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_title .main {
+    font-size: 54px;
+    font-weight: 900;
+  }
+}
+
+.about .inner .container .picture {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about .inner .container .picture img {
+  height: 270px;
+  width: 364px;
+  padding: 11px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .picture img {
+    height: 370px;
+    width: 464px;
+  }
+}
+
+.about .inner .container .introduction {
+  margin-bottom: 30px;
+}
+
+.about .inner .container .introduction h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.about .inner .container .about_text .text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+  background-color: #F0F0E0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.about .inner .container .about_text .text p:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_text .text {
+    font-size: 16px;
+  }
+}
+
+.about .inner .container .about_text .text span {
+  color: #ff6347;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .about .inner .container .about_text .text span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .about {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .about .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about .inner .container .picture {
+    width: 300px;
+    height: 200px;
+  }
+  .about .inner .container .picture img {
+    width: 278px;
+    height: 200px;
+  }
+  .about .inner .container .introduction h3 {
+    font-size: 22px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .__sp {
+    display: none;
+  }
+}
+
 /* skill */
 .skill {
   background-color: #fff;
@@ -669,6 +815,7 @@
   width: 373px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 70px;
 }
 
 @media print, screen and (min-width: 960px) {
@@ -729,7 +876,7 @@
 }
 
 .service .inner .container .service_text .price .item {
-  font-size: 18px;
+  font-size: 16px;
   color: #ff6347;
   margin-bottom: 22px;
   border-radius: 30px 30px 30px 30px;
@@ -761,6 +908,14 @@
 
 .service .inner .container .service_text .price .item:nth-child(3) span {
   padding-left: 25px;
+}
+
+.service .inner .container .service_text .price .item:nth-child(4) span {
+  padding-left: 100px;
+}
+
+.service .inner .container .service_text .price .item:nth-child(5) span {
+  padding-left: 100px;
 }
 
 .service .inner .container .service_text .price .item2 {
@@ -833,22 +988,30 @@
     width: 300px;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 0;
   }
   .service .inner .container .pic img {
     height: 200px;
     width: 278px;
   }
   .service .inner .container .service_text .price .item {
-    font-size: 18px;
+    font-size: 14px;
+    text-align: left;
   }
   .service .inner .container .service_text .price .item:first-child span {
-    padding-left: 0px;
+    padding-left: 10px;
   }
   .service .inner .container .service_text .price .item:nth-child(2) span {
-    padding-left: 0;
+    padding-left: 10px;
   }
   .service .inner .container .service_text .price .item:nth-child(3) span {
-    padding-left: 0;
+    padding-left: 10px;
+  }
+  .service .inner .container .service_text .price .item:nth-child(4) span {
+    padding-left: 10px;
+  }
+  .service .inner .container .service_text .price .item:nth-child(5) span {
+    padding-left: 10px;
   }
 }
 
@@ -1029,9 +1192,6 @@
     height: 270px;
     width: 100%;
   }
-  .works .inner .container .nav .nav_wrap .nav_list .item:hover {
-    display: none;
-  }
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1197,151 +1357,5 @@ body {
 a {
   text-decoration: none;
   color: white;
-}
-
-@media print, screen and (min-width: 768px) {
-  .__sp {
-    display: none;
-  }
-}
-
-/* About Me */
-.about {
-  background-color: #FFE4C4;
-  max-width: 100%;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  font-family: 'Courier','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
-}
-
-.about .inner {
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .about .inner {
-    padding-left: 143px;
-    padding-right: 143px;
-  }
-}
-
-.about .inner .container {
-  color: #ff6347;
-}
-
-.about .inner .container .about_title {
-  margin-bottom: 37px;
-}
-
-.about .inner .container .about_title .main {
-  font-size: 40px;
-  font-weight: 700;
-}
-
-@media print, screen and (min-width: 768px) {
-  .about .inner .container .about_title .main {
-    font-size: 54px;
-    font-weight: 900;
-  }
-}
-
-.about .inner .container .picture {
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about .inner .container .picture img {
-  height: 270px;
-  width: 364px;
-  padding: 11px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-}
-
-@media print, screen and (min-width: 768px) {
-  .about .inner .container .picture img {
-    height: 370px;
-    width: 464px;
-  }
-}
-
-.about .inner .container .introduction {
-  margin-bottom: 30px;
-}
-
-.about .inner .container .introduction h3 {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.about .inner .container .about_text .text {
-  font-size: 14px;
-  line-height: 1.5;
-  color: black;
-  background-color: #F0F0E0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 30px;
-  -webkit-box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
-  border-radius: 10px 10px 10px 10px;
-  margin-bottom: 20px;
-}
-
-.about .inner .container .about_text .text p:not(:last-child) {
-  padding-bottom: 15px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .about .inner .container .about_text .text {
-    font-size: 16px;
-  }
-}
-
-.about .inner .container .about_text .text span {
-  color: #ff6347;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .about .inner .container .about_text .text span {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html,
-  body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  .about {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 100%;
-  }
-  .about .inner {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .about .inner .container .picture {
-    width: 300px;
-    height: 200px;
-  }
-  .about .inner .container .picture img {
-    width: 278px;
-    height: 200px;
-  }
-  .about .inner .container .introduction h3 {
-    font-size: 22px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
